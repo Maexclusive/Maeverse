@@ -1,0 +1,530 @@
+-- DROP SCHEMA public;
+
+CREATE SCHEMA public AUTHORIZATION pg_database_owner;
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+-- DROP SEQUENCE public.cloudflare_domain_cfd_id_seq;
+
+CREATE SEQUENCE public.cloudflare_domain_cfd_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.cloudflare_domain_cfd_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.cloudflare_domain_cfd_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.company_company_id_seq;
+
+CREATE SEQUENCE public.company_company_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.company_company_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.company_company_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.detail_option_detail_op_id_seq;
+
+CREATE SEQUENCE public.detail_option_detail_op_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.detail_option_detail_op_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.detail_option_detail_op_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.details_detail_id_seq;
+
+CREATE SEQUENCE public.details_detail_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.details_detail_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.details_detail_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.failed_jobs_id_seq;
+
+CREATE SEQUENCE public.failed_jobs_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.failed_jobs_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.failed_jobs_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.migrations_id_seq;
+
+CREATE SEQUENCE public.migrations_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.migrations_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.migrations_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.personal_access_tokens_id_seq;
+
+CREATE SEQUENCE public.personal_access_tokens_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.personal_access_tokens_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.personal_access_tokens_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.tunel_cloudflared_tcf_id_seq;
+
+CREATE SEQUENCE public.tunel_cloudflared_tcf_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tunel_cloudflared_tcf_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.tunel_cloudflared_tcf_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.tunel_ngrox_tgk_id_seq;
+
+CREATE SEQUENCE public.tunel_ngrox_tgk_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tunel_ngrox_tgk_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.tunel_ngrox_tgk_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.tunel_provider_tpr_id_seq;
+
+CREATE SEQUENCE public.tunel_provider_tpr_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tunel_provider_tpr_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.tunel_provider_tpr_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.tunnel_tunel_id_seq;
+
+CREATE SEQUENCE public.tunnel_tunel_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.tunnel_tunel_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.tunnel_tunel_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.users_id_seq;
+
+CREATE SEQUENCE public.users_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 9223372036854775807
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.users_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.users_id_seq TO assets_user;
+
+-- DROP SEQUENCE public.vm_vm_id_seq;
+
+CREATE SEQUENCE public.vm_vm_id_seq
+	INCREMENT BY 1
+	MINVALUE 1
+	MAXVALUE 2147483647
+	START 1
+	CACHE 1
+	NO CYCLE;
+
+-- Permissions
+
+ALTER SEQUENCE public.vm_vm_id_seq OWNER TO assets_user;
+GRANT ALL ON SEQUENCE public.vm_vm_id_seq TO assets_user;
+-- public.cloudflare_domain definition
+
+-- Drop table
+
+-- DROP TABLE public.cloudflare_domain;
+
+CREATE TABLE public.cloudflare_domain (
+	cfd_id serial4 NOT NULL,
+	domain_name varchar(255) NOT NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT cloudflare_domain_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.cloudflare_domain OWNER TO assets_user;
+GRANT ALL ON TABLE public.cloudflare_domain TO assets_user;
+
+
+-- public.company definition
+
+-- Drop table
+
+-- DROP TABLE public.company;
+
+CREATE TABLE public.company (
+	company_id serial4 NOT NULL,
+	company_name varchar(255) NOT NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT company_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.company OWNER TO assets_user;
+GRANT ALL ON TABLE public.company TO assets_user;
+
+
+-- public.detail_option definition
+
+-- Drop table
+
+-- DROP TABLE public.detail_option;
+
+CREATE TABLE public.detail_option (
+	detail_op_id serial4 NOT NULL,
+	"name" varchar(255) NOT NULL,
+	deskripsi varchar(255) NOT NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT detail_option_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.detail_option OWNER TO assets_user;
+GRANT ALL ON TABLE public.detail_option TO assets_user;
+
+
+-- public.failed_jobs definition
+
+-- Drop table
+
+-- DROP TABLE public.failed_jobs;
+
+CREATE TABLE public.failed_jobs (
+	id bigserial NOT NULL,
+	uuid varchar(255) NOT NULL,
+	"connection" text NOT NULL,
+	queue text NOT NULL,
+	payload text NOT NULL,
+	"exception" text NOT NULL,
+	failed_at timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	CONSTRAINT failed_jobs_pkey null,
+	CONSTRAINT failed_jobs_uuid_unique null
+);
+
+-- Permissions
+
+ALTER TABLE public.failed_jobs OWNER TO assets_user;
+GRANT ALL ON TABLE public.failed_jobs TO assets_user;
+
+
+-- public.migrations definition
+
+-- Drop table
+
+-- DROP TABLE public.migrations;
+
+CREATE TABLE public.migrations (
+	id serial4 NOT NULL,
+	migration varchar(255) NOT NULL,
+	batch int4 NOT NULL,
+	CONSTRAINT migrations_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.migrations OWNER TO assets_user;
+GRANT ALL ON TABLE public.migrations TO assets_user;
+
+
+-- public.password_resets definition
+
+-- Drop table
+
+-- DROP TABLE public.password_resets;
+
+CREATE TABLE public.password_resets (
+	email varchar(255) NOT NULL,
+	"token" varchar(255) NOT NULL,
+	created_at timestamp(0) NULL
+);
+CREATE INDEX password_resets_email_index ON public.password_resets (email text_ops);
+
+-- Permissions
+
+ALTER TABLE public.password_resets OWNER TO assets_user;
+GRANT ALL ON TABLE public.password_resets TO assets_user;
+
+
+-- public.personal_access_tokens definition
+
+-- Drop table
+
+-- DROP TABLE public.personal_access_tokens;
+
+CREATE TABLE public.personal_access_tokens (
+	id bigserial NOT NULL,
+	tokenable_type varchar(255) NOT NULL,
+	tokenable_id int8 NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"token" varchar(64) NOT NULL,
+	abilities text NULL,
+	last_used_at timestamp(0) NULL,
+	created_at timestamp(0) NULL,
+	updated_at timestamp(0) NULL,
+	CONSTRAINT personal_access_tokens_pkey null,
+	CONSTRAINT personal_access_tokens_token_unique null
+);
+CREATE INDEX personal_access_tokens_tokenable_type_tokenable_id_index ON public.personal_access_tokens (tokenable_type text_ops,tokenable_id int8_ops);
+
+-- Permissions
+
+ALTER TABLE public.personal_access_tokens OWNER TO assets_user;
+GRANT ALL ON TABLE public.personal_access_tokens TO assets_user;
+
+
+-- public.tunel_cloudflared definition
+
+-- Drop table
+
+-- DROP TABLE public.tunel_cloudflared;
+
+CREATE TABLE public.tunel_cloudflared (
+	tcf_id serial4 NOT NULL,
+	cfd_id int8 NOT NULL,
+	tunel_name varchar(255) NOT NULL,
+	tunel_host varchar(255) NOT NULL,
+	tunel_type varchar(255) NOT NULL,
+	tunel_login_users varchar(255) NOT NULL,
+	tunel_login_password varchar(255) NULL,
+	tunel_login_key varchar(255) NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT tunel_cloudflared_pkey PRIMARY KEY (tcf_id)
+);
+
+-- Permissions
+
+ALTER TABLE public.tunel_cloudflared OWNER TO assets_user;
+GRANT ALL ON TABLE public.tunel_cloudflared TO assets_user;
+
+
+-- public.tunel_ngrox definition
+
+-- Drop table
+
+-- DROP TABLE public.tunel_ngrox;
+
+CREATE TABLE public.tunel_ngrox (
+	tgk_id serial4 NOT NULL,
+	email varchar(255) NOT NULL,
+	"password" varchar(255) NOT NULL,
+	host varchar(255) NOT NULL,
+	port varchar(255) NOT NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT tunel_ngrox_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.tunel_ngrox OWNER TO assets_user;
+GRANT ALL ON TABLE public.tunel_ngrox TO assets_user;
+
+
+-- public.tunel_provider definition
+
+-- Drop table
+
+-- DROP TABLE public.tunel_provider;
+
+CREATE TABLE public.tunel_provider (
+	tpr_id serial4 NOT NULL,
+	"name" varchar(255) NOT NULL,
+	deskripsi varchar(255) NOT NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT tunel_provider_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.tunel_provider OWNER TO assets_user;
+GRANT ALL ON TABLE public.tunel_provider TO assets_user;
+
+
+-- public.users definition
+
+-- Drop table
+
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+	id bigserial NOT NULL,
+	"name" varchar(255) NOT NULL,
+	email varchar(255) NOT NULL,
+	email_verified_at timestamp(0) NULL,
+	"password" varchar(255) NOT NULL,
+	remember_token varchar(100) NULL,
+	created_at timestamp(0) NULL,
+	updated_at timestamp(0) NULL,
+	CONSTRAINT users_email_unique null,
+	CONSTRAINT users_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.users OWNER TO assets_user;
+GRANT ALL ON TABLE public.users TO assets_user;
+
+
+-- public.vm definition
+
+-- Drop table
+
+-- DROP TABLE public.vm;
+
+CREATE TABLE public.vm (
+	vm_id serial4 NOT NULL,
+	vm_name varchar(255) NOT NULL,
+	vm_ethernet varchar(255) NOT NULL,
+	vm_ip varchar(255) NOT NULL,
+	vm_gateway varchar(255) NOT NULL,
+	vm_name_server varchar(255) NOT NULL,
+	vm_vlan varchar(255) NOT NULL,
+	vm_host varchar(255) NOT NULL,
+	vm_hostname varchar(255) NOT NULL,
+	vm_os varchar(255) NOT NULL,
+	vm_kernel varchar(255) NOT NULL,
+	note varchar(255) NOT NULL,
+	created_at timestamp(0) NOT NULL,
+	updated_at timestamp(0) NOT NULL,
+	CONSTRAINT vm_pkey null
+);
+
+-- Permissions
+
+ALTER TABLE public.vm OWNER TO assets_user;
+GRANT ALL ON TABLE public.vm TO assets_user;
+
+
+-- public.tunnel definition
+
+-- Drop table
+
+-- DROP TABLE public.tunnel;
+
+CREATE TABLE public.tunnel (
+	tunel_id serial4 NOT NULL,
+	tcf_id int8 NOT NULL,
+	tgk_id int8 NOT NULL,
+	tpr_id int8 NOT NULL,
+	CONSTRAINT tunnel_pkey null,
+	CONSTRAINT tunnel_tcf_id_foreign FOREIGN KEY (tcf_id) REFERENCES public.tunel_cloudflared(tcf_id) ON DELETE CASCADE,
+	CONSTRAINT tunnel_tgk_id_foreign FOREIGN KEY (tgk_id) REFERENCES public.tunel_ngrox(tgk_id) ON DELETE CASCADE,
+	CONSTRAINT tunnel_tpr_id_foreign FOREIGN KEY (tpr_id) REFERENCES public.tunel_provider(tpr_id) ON DELETE CASCADE
+);
+
+-- Permissions
+
+ALTER TABLE public.tunnel OWNER TO assets_user;
+GRANT ALL ON TABLE public.tunnel TO assets_user;
+
+
+-- public.details definition
+
+-- Drop table
+
+-- DROP TABLE public.details;
+
+CREATE TABLE public.details (
+	detail_id serial4 NOT NULL,
+	vm_id int8 NOT NULL,
+	tunel_id int8 NOT NULL,
+	company_id int8 NOT NULL,
+	detail_op_id int8 NOT NULL,
+	CONSTRAINT details_pkey null,
+	CONSTRAINT details_company_id_foreign FOREIGN KEY (company_id) REFERENCES public.company(company_id) ON DELETE CASCADE,
+	CONSTRAINT details_detail_op_id_foreign FOREIGN KEY (detail_op_id) REFERENCES public.detail_option(detail_op_id) ON DELETE CASCADE,
+	CONSTRAINT details_tunel_id_foreign FOREIGN KEY (tunel_id) REFERENCES public.tunnel(tunel_id) ON DELETE CASCADE,
+	CONSTRAINT details_vm_id_foreign FOREIGN KEY (vm_id) REFERENCES public.vm(vm_id) ON DELETE CASCADE
+);
+
+-- Permissions
+
+ALTER TABLE public.details OWNER TO assets_user;
+GRANT ALL ON TABLE public.details TO assets_user;
+
+
+
+
+-- Permissions
+
+GRANT ALL ON SCHEMA public TO pg_database_owner;
+GRANT USAGE ON SCHEMA public TO public;
+GRANT ALL ON SCHEMA public TO assets_user;
