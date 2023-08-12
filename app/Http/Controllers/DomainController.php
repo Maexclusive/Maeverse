@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Domain;
 use DB;
+use Alert;
 
 class DomainController extends Controller
 {

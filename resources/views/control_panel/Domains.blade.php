@@ -1,6 +1,7 @@
 @extends('layouts.header')
 
 @section('content')
+
 <div>
     @include('sweetalert::alert')
     <!-- BEGIN #app -->
@@ -76,27 +77,32 @@
                             </div>
                         </div>
                         {{-- end modal tambah user --}}
-
+                        
+                        
                         <table id="data-table-combine" class="table table-striped table-bordered align-middle">
+                            
                             <thead>
+                                
                                 <tr>
                                     <th width="1%">No</th>
                                     <th class="text-nowrap" width="80%">Nama Domain</th>
                                     <th class="text-nowrap">Action</th>
                                 </tr>
                             </thead>
+                            
                             <tbody>
-                                <?php $i=1 ?>
-                                @foreach ($domains as $d)
+                                
                                 <tr class="odd gradeX">
+                                    <?php $i=1 ?>
+                                    @foreach ($domains as $d)
                                     <td width="1%" class="fw-bold text-dark"><?php echo $i++ ?></td>
                                     <td>{{$d->domain_name}}</td>
                                     <td> 
-                                        <form action="{{ route('Domain.destroy',$d->cfd_id) }}" method="POST">
+                                        <form id="form_action" action="{{ route('Domain.destroy',$d->cfd_id) }}" method="POST">
                                         <a class="btn btn-primary" href="">Edit</a>
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" data-confirm-delete="true">Delete</button>
+                                        <button type="button" onclick="delete_button()" class="btn btn-danger" data-confirm-delete="true">Delete</button>
                                     </form></td>
                                 </tr>
                                 @endforeach
@@ -127,4 +133,34 @@ myModal.addEventListener('shown.bs.modal', function () {
   myInput.focus()
 })
 </script>
+<script>
+
+    function delete_button() { 
+        Swal.fire({
+  title: 'Do you want to Delete ?',
+  showDenyButton: true,
+  showCancelButton: false,
+  confirmButtonText: 'Yes',
+  denyButtonText: 'No',
+  customClass: {
+    actions: 'my-actions',
+    cancelButton: 'order-1 right-gap',
+    confirmButton: 'order-2',
+    denyButton: 'order-3',
+  }
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire('Deleted', '', 'error')
+    // axios.post('/Domain/destroy/' + "1")
+    // {{ route('Domain.destroy',"1") }}
+    // $('#form_action'+{{$d->cfd_id}}).trigger('submit');
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
+  }
+})
+     }
+    
+
+</script>
+
 @endsection

@@ -55,6 +55,7 @@ class CloudflareController extends Controller
         'tunel_login_password' => $request->tunel_login_password,
         'tunel_login_key' => $request->tunel_login_key
         ]);
+        
         Alert::success('Berhasil', 'Data Berhasil Ditambahkan');
         return redirect()->route('Cloudflare.index');
     }
@@ -103,6 +104,7 @@ class CloudflareController extends Controller
     public function destroy(Cloudflare $Cloudflare)
     {
         $Cloudflare->delete();
+        
         return redirect()->route('Cloudflare.index')
                  ->with('success','User deleted successfully');
     }

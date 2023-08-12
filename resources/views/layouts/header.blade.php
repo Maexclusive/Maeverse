@@ -13,6 +13,8 @@
 	<link href="{{ asset('css/default/app.min.css') }}" rel="stylesheet" />
 	<!-- ================== END core-css ================== -->
 
+
+
 	<!-- ================== BEGIN page-css ================== -->
 	<link href="{{ asset('plugins/jvectormap-next/jquery-jvectormap.css')}}" rel="stylesheet" />
 	<link href="{{ asset('plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.css')}}" rel="stylesheet" />
@@ -132,7 +134,8 @@
 
 	{{-- API JS Libs --}}
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
 	<!-- ================== END page-js ================== -->

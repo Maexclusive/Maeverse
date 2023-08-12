@@ -95,7 +95,7 @@
                                                     <label for="exampleInputPassword1" class="float-start pb-2">
                                                         Tunnel Type
                                                     </label>
-                                                    <select class="form-control" name="" id="slct_options">
+                                                    <select class="form-control" name="tunel_type" id="slct_options">
                                                         <option value="SSH">SSH</option>
                                                         <option value="TCP">TCP</option>
                                                         <option value="FTP">FTP</option>
@@ -128,7 +128,7 @@
                                                         name="tunel_login_key" 
                                                         placeholder="SSH Key" />
                                                     <input id="password_login" type="password" class="form-control d-none"
-                                                        name="tunel_login_key"
+                                                        name="tunel_login_password"
                                                         placeholder="Password" />
                                                 </div>
                                                 <div class="form-group col">
