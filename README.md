@@ -1,3 +1,28 @@
+# Installation
+
+1. **Composer Install :** Run The ``composer install`` for provisioning the vendor depedency
+
+2. **Rename ".env.example":** rename the file named ".env.example" to **".env"**
+
+3. **Generate App Key :** generate the application key before started the development server using ``php artisan key:generate``
+
+4. **Start The Application Server :** Run the application using ``php artisan serve``
+
+## Quickstart
+```
+> composer install
+> mv ".env.example" ".env"
+> php artisan key:generate
+> php artisan serve
+
+```
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
