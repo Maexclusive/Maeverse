@@ -99,21 +99,21 @@ export function Navbar() {
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          {NAV_MENU.map(({ name, icon: Icon, href }) => (
+          {/* {NAV_MENU.map(({ name, icon: Icon, href }) => (
             <NavItem key={name} href={href}>
               <Icon className="h-5 w-5" />
               <span>{name}</span>
             </NavItem>
-          ))}
+          ))} */}
         </ul>
-        <div className="hidden items-center gap-4 lg:flex">
+        {/* <div className="hidden items-center gap-4 lg:flex">
           <Button color={isScrolling ? "gray" : "white"} variant="text">
             Log in
           </Button>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
             <Button color={isScrolling ? "gray" : "white"}>blocks</Button>
           </a>
-        </div>
+        </div> */}
         <IconButton
           variant="text"
           color={isScrolling ? "gray" : "white"}
@@ -137,12 +137,12 @@ export function Navbar() {
               </NavItem>
             ))}
           </ul>
-          <div className="mt-6 flex items-center gap-4">
+          {/* <div className="mt-6 flex items-center gap-4">
             <Button variant="text">Log in</Button>
             <a href="https://www.materila-tailwind.com/blocks" target="_blank">
               <Button color="gray">blocks</Button>
             </a>
-          </div>
+          </div> */}
         </div>
       </Collapse>
     </MTNavbar>

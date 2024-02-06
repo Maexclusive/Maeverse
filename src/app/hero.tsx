@@ -24,10 +24,13 @@ function Hero() {
         </Typography>
         <div className="flex items-center gap-4">
           <Button variant="gradient" color="white">
-            Get started
+          <a href="https://wa.me/62859106907457" target="_blank">
+          Get started
+          </a>
           </Button>
-          <IconButton className="rounded-full bg-white p-6">
-            <PlayIcon className="h-4 w-4 text-gray-900" />
+          <IconButton href="https://wa.me/62859106907457" className="rounded-full bg-white p-6">
+            <a href="https://wa.me/62859106907457"><PlayIcon href="https://wa.me/62859106907457" className="h-4 w-4 text-gray-900" /></a>
+            
           </IconButton>
         </div>
       </div>

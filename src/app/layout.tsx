@@ -10,9 +10,10 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Tailwind Event Landing Page",
+  title: "Maeverse",
+  icons: "image/Logo.png",
   description:
-    "Introducing Tailwind Event Landing Page, a dynamic and visually appealing landing page template designed using Tailwind CSS and Material Tailwind.",
+    "AniMae Community Website | Maeverse",
 };
 
 export default function RootLayout({
@@ -33,7 +34,8 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Layout>
           {children}
-          <FixedPlugin />
+          {/* Fixed Plugin Watermarks */}
+          {/* <FixedPlugin /> */}
         </Layout>
         <link
           rel="stylesheet"
