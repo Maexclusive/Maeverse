@@ -45,7 +45,7 @@ export function EventContent() {
         <div className="w-full flex mb-8 flex-col items-center">
           <TabsHeader placeholder="Tab Header" className="h-12 w-72 md:w-96">
             <Tab placeholder="Tabs" value="Day1" className="font-medium">
-              AniMae Featured Store / Trusted Store
+              Featured / Trusted Store Store with AniMae
             </Tab>
           </TabsHeader>
         </div>
