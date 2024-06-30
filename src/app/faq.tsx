@@ -34,10 +34,10 @@ export function Faq() {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto">
         <div className="text-center">
-          <Typography variant="h1" color="blue-gray" className="mb-4">
+          <Typography placeholder="" variant="h1" color="blue-gray" className="mb-4">
             Frequently asked questions
           </Typography>
-          <Typography
+          <Typography placeholder=""
             variant="lead"
             className="mx-auto mb-24 lg:w-3/5 !text-gray-500"
           >
@@ -49,16 +49,16 @@ export function Faq() {
 
         <div className="mx-auto lg:max-w-screen-lg lg:px-20">
           {FAQS.map(({ title, desc }, key) => (
-            <Accordion
+            <Accordion placeholder=""
               key={key}
               open={open === key + 1}
               onClick={() => handleOpen(key + 1)}
             >
-              <AccordionHeader className="text-left text-gray-900">
+              <AccordionHeader placeholder="" className="text-left text-gray-900">
                 {title}
               </AccordionHeader>
               <AccordionBody>
-                <Typography
+                <Typography placeholder=""
                   color="blue-gray"
                   className="font-normal text-gray-500"
                 >

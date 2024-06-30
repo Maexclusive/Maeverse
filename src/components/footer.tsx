@@ -10,6 +10,7 @@ export function Footer() {
         
         <div className="flex flex-col md:flex-row items-center !justify-between">
           <Typography
+            placeholder=""
             as="a"
             href="https://www.material-tailwind.com"
             target="_blank"
@@ -22,6 +23,7 @@ export function Footer() {
             {LINKS.map((link, index) => (
               <li key={index}>
                 <Typography
+                  placeholder=""
                   as="a"
                   href="#"
                   variant="small"
@@ -34,21 +36,21 @@ export function Footer() {
             ))}
           </ul>
           <div className="flex w-fit justify-center gap-2">
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton placeholder="" size="sm" color="gray" variant="text">
               <i className="fa-brands fa-twitter text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton placeholder="" size="sm" color="gray" variant="text">
               <i className="fa-brands fa-youtube text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton placeholder="" size="sm" color="gray" variant="text">
               <i className="fa-brands fa-instagram text-lg" />
             </IconButton>
-            <IconButton size="sm" color="gray" variant="text">
+            <IconButton placeholder="" size="sm" color="gray" variant="text">
               <i className="fa-brands fa-github text-lg" />
             </IconButton>
           </div>
         </div>
-        <Typography
+        <Typography placeholder=""
         // © 2022 - 2023 AniMae Community All Rights Reserved
           color="blue-gray"
           className="text-center mt-12 font-normal !text-gray-700"

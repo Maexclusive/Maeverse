@@ -9,13 +9,13 @@ function Hero() {
     <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
     <div className="grid min-h-screen px-8">
       <div className="container relative z-10 my-auto mx-auto grid place-items-center text-center">
-        <Typography variant="h3" color="white" className="mb-2">
+        <Typography placeholder="" variant="h3" color="white" className="mb-2">
           AniMae Projects
         </Typography>
-        <Typography variant="h1" color="white" className="lg:max-w-3xl">
+        <Typography placeholder="" variant="h1" color="white" className="lg:max-w-3xl">
          Maeverse
         </Typography>
-        <Typography
+        <Typography placeholder=""
           variant="lead"
           color="white"
           className="mt-1 mb-12 w-full md:max-w-full lg:max-w-2xl"
@@ -23,14 +23,13 @@ function Hero() {
           Join us for the new community platform -  Maeverse
         </Typography>
         <div className="flex items-center gap-4">
-          <Button variant="gradient" color="white">
+          <Button placeholder="" variant="gradient" color="white">
           <a href="https://wa.me/62859106907457" target="_blank">
           Get started
           </a>
           </Button>
-          <IconButton href="https://wa.me/62859106907457" className="rounded-full bg-white p-6">
+          <IconButton placeholder="" className="rounded-full bg-white p-6">
             <a href="https://wa.me/62859106907457"><PlayIcon href="https://wa.me/62859106907457" className="h-4 w-4 text-gray-900" /></a>
-            
           </IconButton>
         </div>
       </div>
