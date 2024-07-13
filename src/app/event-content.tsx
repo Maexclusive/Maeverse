@@ -15,7 +15,7 @@ const EVENT_CONTENT = [
     des: "RENT KOSTUM & STYLING-REPAIR WIG",
     name: "@cilokrentcos",
     link: "https://www.instagram.com/cilokrentcos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-    model_toko: "Rentcos",
+    model_toko: "Cosplay Rent Store",
     img: "/image/cilokrentcos.webp",
   },
   {
@@ -25,6 +25,14 @@ const EVENT_CONTENT = [
     link: "https://www.instagram.com/cumistylistwig?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     model_toko: "Wig Styling Comission",
     img: "/image/cumistylistwig.jpg",
+  },
+  {
+    title: "@rabbitruu_",
+    des: "Cosplay & Anime Props and Merch Store",
+    name: "@rabbitruu_",
+    link: "https://www.instagram.com/rabbitruu_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    model_toko: "Props & Merch Store",
+    img: "/image/rabbitruu_.jpg",
   }
 ];
 const dummy_data = [

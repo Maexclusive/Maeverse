@@ -26,7 +26,7 @@ export function EventContentCard({
   img,
 }: EventContentCardProps) {
   return (
-    <Card placeholder="CardList" className=" mt-6 w-96 items-center lg:w-full lg:flex-row">
+    <Card placeholder="CardList" className=" mt-6 w-100 items-center lg:w-full lg:flex-row">
       <CardHeader placeholder="cardHeader" floated={false} shadow={false} className="flex h-auto max-w-[28rem] shrink-0 justify-center w-56">
          <Image width={240} height={240} src={img} alt="testimonial image" className="rounded-full object-cover object-center w-full"/>
       </CardHeader>
